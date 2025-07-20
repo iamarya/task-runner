@@ -27,3 +27,4 @@ class TelegramNotifier(Notifier):
                 self.offset = update.update_id + 1
         return messages
         
+notifier = TelegramNotifier()

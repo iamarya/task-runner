@@ -1,6 +1,4 @@
-from notify.telegram_notifier import TelegramNotifier
-
-notifier = TelegramNotifier()
+from client.telegram_notifier_client import notifier
 
 async def receive_message():
     try:

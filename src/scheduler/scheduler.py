@@ -1,4 +1,4 @@
-from scheduler.telegram_task import telegram_recieve_task, telegram_send_task
+from task.telegram_task import telegram_recieve_task, telegram_send_task
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
 
