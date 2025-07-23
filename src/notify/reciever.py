@@ -1,8 +1,11 @@
 from client.telegram_notifier_client import notifier
+import logging
+
+logger = logging.getLogger(__name__)
 
 async def receive_message():
     try:
         msgs:list[str] = await notifier.receive_message()
-        print("Polled:", msgs)
+        logger.info("Polled: %s", msgs)
     except Exception as e:
-        print("Polling error:", e)
+        logger.error("Polling error: %s", e)

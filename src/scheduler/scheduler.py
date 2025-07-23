@@ -1,11 +1,13 @@
-from task.telegram_task import telegram_recieve_task, telegram_send_task
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import asyncio
+
+from task.telegram_task import telegram_recieve_task, telegram_send_task
+from task.factor_task import factor_send_task
 
 
 scheduler = AsyncIOScheduler()
 
-scheduler.add_job(telegram_send_task, trigger='interval', seconds=15)
+scheduler.add_job(factor_send_task, trigger='interval', seconds=15)
 scheduler.add_job(telegram_recieve_task, trigger='interval', seconds=15)
 
 async def init_async_scheduler():
