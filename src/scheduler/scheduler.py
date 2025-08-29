@@ -7,8 +7,8 @@ from task.factor_task import factor_send_task
 
 scheduler = AsyncIOScheduler()
 
-scheduler.add_job(factor_send_task, trigger='interval', seconds=15)
-scheduler.add_job(telegram_recieve_task, trigger='interval', seconds=15)
+scheduler.add_job(factor_send_task, trigger='cron', hour=10, minute=0)
+scheduler.add_job(telegram_recieve_task, trigger='interval', seconds=60)
 
 async def init_async_scheduler():
     print("Starting scheduler...")
