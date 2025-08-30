@@ -41,7 +41,7 @@ async def check_balance():
                     if amount != '£0.00':
                         return f"Amount pending: {amount}"
                     else:
-                        return "No pending balance"
+                        return ""
                 else:
                     raise ValueError("Balance field not found.")
             else:
