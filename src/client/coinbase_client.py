@@ -67,8 +67,7 @@ import asyncio
 async def main():
     cb_client = CoinbaseClient()
     loop = asyncio.get_event_loop()
-    usdc_balance = await loop.run_in_executor(None, cb_client.get_usdc_balance)
-    print(f"Current USDC balance: {usdc_balance}")
+    return await loop.run_in_executor(None, cb_client.get_usdc_balance)
 
 if __name__ == "__main__":
     asyncio.run(main())
