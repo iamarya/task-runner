@@ -1,4 +1,4 @@
-from src.client.coinbase_client import main
+from client.coinbase_client import main
 import asyncio
 
 import time
