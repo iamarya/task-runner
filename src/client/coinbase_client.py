@@ -67,7 +67,7 @@ import asyncio
 async def main():
     cb_client = CoinbaseClient()
     loop = asyncio.get_event_loop()
-    return await loop.run_in_executor(None, cb_client.get_usdc_balance)
+    return await loop.run_in_executor(None, cb_client.buy_btc_with_usdc)
 
 if __name__ == "__main__":
     asyncio.run(main())
